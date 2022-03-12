@@ -1,0 +1,1 @@
+python main.py <./test/input.txt >./test/output.txt

@@ -1,0 +1,68 @@
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ Olá, usuário!
+ Seja bem-vindo(a) ao
+ Sistema de Registro de Doações do Dispensário Santana ( SRDDS )
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Aperte ENTER para cadastrar um novo doador: 
+=-=-=-=-=-=-=-= Sobre o doador =-=-=-=-=-=-=-=
+Qual o nome do doedor? Qual o tipo de pessoa? (fisica ou juridica) 
+=-=-=-=-=-=-=-= Itens doados =-=-=-=-=-=-=-=
+Quanto de Açucar foi doado por jose? (KG) Quanto de Arroz foi doado por jose? (KG) Quanto de Café foi doado por jose? (KG) Quanto de Extrato de Tomate foi doado por jose? (unidades) Quanto de Macarrão foi doado por jose? (unidades) Quanto de Pacote de Bolacha foi doado por jose? (unidades) Quanto de Óleo foi doado por jose? (litros) Quanto de Farinha de Trigo foi doado por jose? (KG) Quanto de Feijão foi doado por jose? (KG) Quanto de Sal foi doado por jose? (KG) Quanto de Outros Itens foi doado por jose? (unidades) 
+Muito bem! O doador jose foi devidamente cadastrado!
+Você deseja continuar a cadastrar outro doador?
+Digite SIM para continuar ou NAO para ir para os relatórios: 
+=-=-=-=-=-=-=-= Sobre o doador =-=-=-=-=-=-=-=
+Qual o nome do doedor? Qual o tipo de pessoa? (fisica ou juridica) 
+=-=-=-=-=-=-=-= Itens doados =-=-=-=-=-=-=-=
+Quanto de Açucar foi doado por antonio? (KG) Quanto de Arroz foi doado por antonio? (KG) Quanto de Café foi doado por antonio? (KG) Quanto de Extrato de Tomate foi doado por antonio? (unidades) Quanto de Macarrão foi doado por antonio? (unidades) Quanto de Pacote de Bolacha foi doado por antonio? (unidades) Quanto de Óleo foi doado por antonio? (litros) Quanto de Farinha de Trigo foi doado por antonio? (KG) Quanto de Feijão foi doado por antonio? (KG) Quanto de Sal foi doado por antonio? (KG) Quanto de Outros Itens foi doado por antonio? (unidades) 
+Muito bem! O doador antonio foi devidamente cadastrado!
+Você deseja continuar a cadastrar outro doador?
+Digite SIM para continuar ou NAO para ir para os relatórios: 
+=-=-=-=-=-=-=-= Sobre o doador =-=-=-=-=-=-=-=
+Qual o nome do doedor? Qual o tipo de pessoa? (fisica ou juridica) 
+=-=-=-=-=-=-=-= Itens doados =-=-=-=-=-=-=-=
+Quanto de Açucar foi doado por jorge? (KG) Quanto de Arroz foi doado por jorge? (KG) Quanto de Café foi doado por jorge? (KG) Quanto de Extrato de Tomate foi doado por jorge? (unidades) Quanto de Macarrão foi doado por jorge? (unidades) Quanto de Pacote de Bolacha foi doado por jorge? (unidades) Quanto de Óleo foi doado por jorge? (litros) Quanto de Farinha de Trigo foi doado por jorge? (KG) Quanto de Feijão foi doado por jorge? (KG) Quanto de Sal foi doado por jorge? (KG) Quanto de Outros Itens foi doado por jorge? (unidades) 
+Muito bem! O doador jorge foi devidamente cadastrado!
+Você deseja continuar a cadastrar outro doador?
+Digite SIM para continuar ou NAO para ir para os relatórios: 
+=-=-=-=-=-=-=-= Relatório do Dia =-=-=-=-=-=-=-=
+
+Itens doados:
+     9 KG de Açucar
+     9 KG de Arroz
+     9 KG de Café
+     9 unidade(s) de Extrato de Tomate
+     9 unidade(s) de Macarrão
+     9 unidade(s) de Pacote de Bolacha
+     9 litro(s) de Óleo
+     9 unidade(s) de Farinha de Trigo
+     9 KG de Feijão
+     9 KG de Sal
+     1 unidade(s) de Outros Produtos
+
+Itens doados por tipo de pessoa:
+     51 item(ns) doado(s) por PESSOA FÍSICA
+     40 item(ns) doado(s) por PESSOA JURÍDICA
+
+Cestas básicas que poderão ser formadas:
+     2 cesta(s) básica(s) completa(s)
+
+Cestas básicas que receberão itens extras:
+     1 cesta(s) básica(s)
+
+Cestas básicas que NÃO receberão itens extras:
+     1 cesta(s) básica(s)
+
+Itens que sobraram após a montagem das Cestas Básicas:
+     7 KG de Açucar
+     1 KG de Arroz
+     5 KG de Café
+     5 unidade(s) de Extrato de Tomate
+     3 unidade(s) de Macarrão
+     7 unidade(s) de Pacote de Bolacha
+     7 litro(s) de Óleo
+     7 unidade(s) de Farinha de Trigo
+     1 KG de Feijão
+     7 KG de Sal
+     0 unidade(s) de Outros Produtos
+
