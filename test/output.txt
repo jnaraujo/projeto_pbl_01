@@ -5,64 +5,85 @@
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 Aperte ENTER para cadastrar um novo doador: 
 =-=-=-=-=-=-=-= Sobre o doador =-=-=-=-=-=-=-=
-Qual o nome do doedor? Qual o tipo de pessoa? (fisica ou juridica) 
-=-=-=-=-=-=-=-= Itens doados =-=-=-=-=-=-=-=
-Quanto de Açucar foi doado por jose? (KG) Quanto de Arroz foi doado por jose? (KG) Quanto de Café foi doado por jose? (KG) Quanto de Extrato de Tomate foi doado por jose? (unidades) Quanto de Macarrão foi doado por jose? (unidades) Quanto de Pacote de Bolacha foi doado por jose? (unidades) Quanto de Óleo foi doado por jose? (litros) Quanto de Farinha de Trigo foi doado por jose? (KG) Quanto de Feijão foi doado por jose? (KG) Quanto de Sal foi doado por jose? (KG) Quanto de Outros Itens foi doado por jose? (unidades) 
-Muito bem! O doador jose foi devidamente cadastrado!
+Qual o nome do doador? Qual o tipo de pessoa? (fisica ou juridica) 
+=-=-=-=-=-=-=-= Escolha o item para adicionar =-=-=-=-=-=-=-=
+[0] Açúcar                    [7] Farinha de Trigo         
+[1] Arroz                     [8] Feijão                   
+[2] Café                      [9] Sal                      
+[3] Extrato de Tomate         [10] Outros Itens             
+[4] Macarrão                 
+[5] Pacote de Bolacha        
+[6] Óleo                      [11] Finalizar doação         
+Sua Opção: Quanto de Açúcar foi doado por JOSE? (KG) Sua Opção: Quanto de Arroz foi doado por JOSE? (KG) Sua Opção: Quanto de Café foi doado por JOSE? (KG) Sua Opção: Quanto de Extrato de Tomate foi doado por JOSE? (unidades) Sua Opção: Quanto de Macarrão foi doado por JOSE? (unidades) Sua Opção: Quanto de Pacote de Bolacha foi doado por JOSE? (unidades) Sua Opção: Quanto de Óleo foi doado por JOSE? (litros) Sua Opção: Quanto de Farinha de Trigo foi doado por JOSE? (KG) Sua Opção: Quanto de Feijão foi doado por JOSE? (KG) Sua Opção: Quanto de Sal foi doado por JOSE? (KG) Sua Opção: Quanto de Outros Itens foi doado por JOSE? (unidades) Sua Opção: 
+Muito bem! O doador JOSE foi devidamente cadastrado!
 Você deseja continuar a cadastrar outro doador?
-Digite SIM para continuar ou NAO para ir para os relatórios: 
+[0] Adicionar novo doador     [1] Ir para relatórios       
 =-=-=-=-=-=-=-= Sobre o doador =-=-=-=-=-=-=-=
-Qual o nome do doedor? Qual o tipo de pessoa? (fisica ou juridica) 
-=-=-=-=-=-=-=-= Itens doados =-=-=-=-=-=-=-=
-Quanto de Açucar foi doado por antonio? (KG) Quanto de Arroz foi doado por antonio? (KG) Quanto de Café foi doado por antonio? (KG) Quanto de Extrato de Tomate foi doado por antonio? (unidades) Quanto de Macarrão foi doado por antonio? (unidades) Quanto de Pacote de Bolacha foi doado por antonio? (unidades) Quanto de Óleo foi doado por antonio? (litros) Quanto de Farinha de Trigo foi doado por antonio? (KG) Quanto de Feijão foi doado por antonio? (KG) Quanto de Sal foi doado por antonio? (KG) Quanto de Outros Itens foi doado por antonio? (unidades) 
-Muito bem! O doador antonio foi devidamente cadastrado!
+Qual o nome do doador? Qual o tipo de pessoa? (fisica ou juridica) 
+=-=-=-=-=-=-=-= Escolha o item para adicionar =-=-=-=-=-=-=-=
+[0] Açúcar                    [7] Farinha de Trigo         
+[1] Arroz                     [8] Feijão                   
+[2] Café                      [9] Sal                      
+[3] Extrato de Tomate         [10] Outros Itens             
+[4] Macarrão                 
+[5] Pacote de Bolacha        
+[6] Óleo                      [11] Finalizar doação         
+Sua Opção: Quanto de Açúcar foi doado por ANTONIO? (KG) Sua Opção: Quanto de Arroz foi doado por ANTONIO? (KG) Sua Opção: Quanto de Café foi doado por ANTONIO? (KG) Sua Opção: Quanto de Extrato de Tomate foi doado por ANTONIO? (unidades) Sua Opção: Quanto de Macarrão foi doado por ANTONIO? (unidades) Sua Opção: Quanto de Pacote de Bolacha foi doado por ANTONIO? (unidades) Sua Opção: Quanto de Óleo foi doado por ANTONIO? (litros) Sua Opção: Quanto de Farinha de Trigo foi doado por ANTONIO? (KG) Sua Opção: Quanto de Feijão foi doado por ANTONIO? (KG) Sua Opção: Quanto de Sal foi doado por ANTONIO? (KG) Sua Opção: Quanto de Outros Itens foi doado por ANTONIO? (unidades) Sua Opção: 
+Muito bem! O doador ANTONIO foi devidamente cadastrado!
 Você deseja continuar a cadastrar outro doador?
-Digite SIM para continuar ou NAO para ir para os relatórios: 
+[0] Adicionar novo doador     [1] Ir para relatórios       
 =-=-=-=-=-=-=-= Sobre o doador =-=-=-=-=-=-=-=
-Qual o nome do doedor? Qual o tipo de pessoa? (fisica ou juridica) 
-=-=-=-=-=-=-=-= Itens doados =-=-=-=-=-=-=-=
-Quanto de Açucar foi doado por jorge? (KG) Quanto de Arroz foi doado por jorge? (KG) Quanto de Café foi doado por jorge? (KG) Quanto de Extrato de Tomate foi doado por jorge? (unidades) Quanto de Macarrão foi doado por jorge? (unidades) Quanto de Pacote de Bolacha foi doado por jorge? (unidades) Quanto de Óleo foi doado por jorge? (litros) Quanto de Farinha de Trigo foi doado por jorge? (KG) Quanto de Feijão foi doado por jorge? (KG) Quanto de Sal foi doado por jorge? (KG) Quanto de Outros Itens foi doado por jorge? (unidades) 
-Muito bem! O doador jorge foi devidamente cadastrado!
+Qual o nome do doador? Qual o tipo de pessoa? (fisica ou juridica) 
+=-=-=-=-=-=-=-= Escolha o item para adicionar =-=-=-=-=-=-=-=
+[0] Açúcar                    [7] Farinha de Trigo         
+[1] Arroz                     [8] Feijão                   
+[2] Café                      [9] Sal                      
+[3] Extrato de Tomate         [10] Outros Itens             
+[4] Macarrão                 
+[5] Pacote de Bolacha        
+[6] Óleo                      [11] Finalizar doação         
+Sua Opção: Quanto de Açúcar foi doado por JORGE? (KG) Sua Opção: Quanto de Arroz foi doado por JORGE? (KG) Sua Opção: Quanto de Café foi doado por JORGE? (KG) Sua Opção: Quanto de Extrato de Tomate foi doado por JORGE? (unidades) Sua Opção: Quanto de Macarrão foi doado por JORGE? (unidades) Sua Opção: Quanto de Pacote de Bolacha foi doado por JORGE? (unidades) Sua Opção: Quanto de Óleo foi doado por JORGE? (litros) Sua Opção: Quanto de Farinha de Trigo foi doado por JORGE? (KG) Sua Opção: Quanto de Feijão foi doado por JORGE? (KG) Sua Opção: Quanto de Sal foi doado por JORGE? (KG) Sua Opção: Quanto de Outros Itens foi doado por JORGE? (unidades) Sua Opção: 
+Muito bem! O doador JORGE foi devidamente cadastrado!
 Você deseja continuar a cadastrar outro doador?
-Digite SIM para continuar ou NAO para ir para os relatórios: 
-=-=-=-=-=-=-=-= Relatório do Dia =-=-=-=-=-=-=-=
+[0] Adicionar novo doador     [1] Ir para relatórios       
+=-=-=-=-=-=-=-= Relatório das Doações =-=-=-=-=-=-=-=
 
 Itens doados:
-     9 KG de Açucar
-     9 KG de Arroz
-     9 KG de Café
-     9 unidade(s) de Extrato de Tomate
-     9 unidade(s) de Macarrão
-     9 unidade(s) de Pacote de Bolacha
-     9 litro(s) de Óleo
-     9 unidade(s) de Farinha de Trigo
-     9 KG de Feijão
-     9 KG de Sal
-     1 unidade(s) de Outros Produtos
+     15 KG de Açúcar
+     15 KG de Arroz
+     15 KG de Café
+     15 unidade(s) de Extrato de Tomate
+     15 unidade(s) de Macarrão
+     15 unidade(s) de Pacote de Bolacha
+     15 litro(s) de Óleo
+     15 unidade(s) de Farinha de Trigo
+     27 KG de Feijão
+     30 KG de Sal
+     3 unidade(s) de Outros Produtos
 
 Itens doados por tipo de pessoa:
-     51 item(ns) doado(s) por PESSOA FÍSICA
-     40 item(ns) doado(s) por PESSOA JURÍDICA
+     60 item(ns) doado(s) por PESSOA FÍSICA
+     120 item(ns) doado(s) por PESSOA JURÍDICA
 
 Cestas básicas que poderão ser formadas:
-     2 cesta(s) básica(s) completa(s)
+     3 cesta(s) básica(s) completa(s)
 
 Cestas básicas que receberão itens extras:
-     1 cesta(s) básica(s)
+     3 cesta(s) básica(s)
 
 Cestas básicas que NÃO receberão itens extras:
-     1 cesta(s) básica(s)
+     0 cesta(s) básica(s)
 
 Itens que sobraram após a montagem das Cestas Básicas:
-     7 KG de Açucar
-     1 KG de Arroz
-     5 KG de Café
-     5 unidade(s) de Extrato de Tomate
-     3 unidade(s) de Macarrão
-     7 unidade(s) de Pacote de Bolacha
-     7 litro(s) de Óleo
-     7 unidade(s) de Farinha de Trigo
-     1 KG de Feijão
-     7 KG de Sal
+     12 KG de Açucar
+     3 KG de Arroz
+     9 KG de Café
+     9 unidade(s) de Extrato de Tomate
+     6 unidade(s) de Macarrão
+     12 unidade(s) de Pacote de Bolacha
+     12 litro(s) de Óleo
+     12 unidade(s) de Farinha de Trigo
+     15 KG de Feijão
+     27 KG de Sal
      0 unidade(s) de Outros Produtos
 
