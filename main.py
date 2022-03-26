@@ -11,19 +11,22 @@
 
 ******************************************************************************************/ """
 
-########## VARIÁVEIS ##########
+########## CONSTANTES ##########
 
 # Quantidades de itens por cesta básica
-cesta_qnt_acucar = 1  # kg
-cesta_qnt_arroz = 4  # kg
-cesta_qnt_cafe = 2  # kg
-cesta_qnt_extrato_de_tomate = 2  # unidade
-cesta_qnt_macarrao = 3  # unidade
-cesta_qnt_pct_bolacha = 1  # unidade
-cesta_qnt_oleo = 1  # litro
-cesta_qnt_farinha_de_trigo = 1  # kg
-cesta_qnt_feijao = 4  # kg
-cesta_qnt_sal = 1  # kg
+
+CESTA_QNT_ACUCAR = 1  # KG
+CESTA_QNT_ARROZ = 4  # KG
+CESTA_QNT_CAFE = 2  # KG
+CESTA_QNT_EXTRATO_DE_TOMATE = 2  # UNIDADE
+CESTA_QNT_MACARRAO = 3  # UNIDADE
+CESTA_QNT_PCT_BOLACHA = 1  # UNIDADE
+CESTA_QNT_OLEO = 1  # LITRO
+CESTA_QNT_FARINHA_DE_TRIGO = 1  # KG
+CESTA_QNT_FEIJAO = 4  # KG
+CESTA_QNT_SAL = 1  # KG
+
+########## VARIÁVEIS ##########
 
 # Quantidades de itens doados
 qnt_acucar = 0
@@ -113,16 +116,16 @@ def ler_e_validar_tipo_do_doador(mensagem):
 # Retorna quantas cestas básicas poderão ser formadas com os itens doados
 def calcular_cestas():
     # quantos itens podem ser feitos por cesta
-    cestas_com_acucar = qnt_acucar // cesta_qnt_acucar
-    cestas_com_arroz = qnt_arroz // cesta_qnt_arroz
-    cestas_com_cafe = qnt_cafe // cesta_qnt_cafe
-    cestas_com_extrato_de_tomate = qnt_extrato_de_tomate // cesta_qnt_extrato_de_tomate
-    cestas_com_macarrao = qnt_macarrao // cesta_qnt_macarrao
-    cestas_com_pct_bolacha = qnt_pct_bolacha // cesta_qnt_pct_bolacha
-    cestas_com_oleo = qnt_oleo // cesta_qnt_oleo
-    cestas_com_farinha_de_trigo = qnt_farinha_de_trigo // cesta_qnt_farinha_de_trigo
-    cestas_com_feijao = qnt_feijao // cesta_qnt_feijao
-    cestas_com_sal = qnt_sal // cesta_qnt_sal
+    cestas_com_acucar = qnt_acucar // CESTA_QNT_ACUCAR
+    cestas_com_arroz = qnt_arroz // CESTA_QNT_ARROZ
+    cestas_com_cafe = qnt_cafe // CESTA_QNT_CAFE
+    cestas_com_extrato_de_tomate = qnt_extrato_de_tomate // CESTA_QNT_EXTRATO_DE_TOMATE
+    cestas_com_macarrao = qnt_macarrao // CESTA_QNT_MACARRAO
+    cestas_com_pct_bolacha = qnt_pct_bolacha // CESTA_QNT_PCT_BOLACHA
+    cestas_com_oleo = qnt_oleo // CESTA_QNT_OLEO
+    cestas_com_farinha_de_trigo = qnt_farinha_de_trigo // CESTA_QNT_FARINHA_DE_TRIGO
+    cestas_com_feijao = qnt_feijao // CESTA_QNT_FEIJAO
+    cestas_com_sal = qnt_sal // CESTA_QNT_SAL
 
     return min(cestas_com_acucar, cestas_com_arroz, cestas_com_cafe, cestas_com_extrato_de_tomate, cestas_com_macarrao, cestas_com_pct_bolacha, cestas_com_oleo, cestas_com_farinha_de_trigo, cestas_com_feijao, cestas_com_sal)
 
@@ -134,16 +137,16 @@ def cestas_com_item_extra():
 def calcular_sobra_de_itens():
     global sobra_acucar, sobra_arroz, sobra_cafe, sobra_extrato_de_tomate, sobra_macarrao, sobra_pct_bolacha, sobra_oleo, sobra_farinha_de_trigo, sobra_feijao, sobra_sal, sobra_outros  # adiciona as variáveis globais ao escopo local para poderem ser alteradas
 
-    sobra_acucar = qnt_acucar - (quantidade_de_cestas * cesta_qnt_acucar)
-    sobra_arroz = qnt_arroz - (quantidade_de_cestas * cesta_qnt_arroz)
-    sobra_cafe = qnt_cafe - (quantidade_de_cestas * cesta_qnt_cafe)
-    sobra_extrato_de_tomate = qnt_extrato_de_tomate - (quantidade_de_cestas * cesta_qnt_extrato_de_tomate)
-    sobra_macarrao = qnt_macarrao - (quantidade_de_cestas * cesta_qnt_macarrao)
-    sobra_pct_bolacha = qnt_pct_bolacha - (quantidade_de_cestas * cesta_qnt_pct_bolacha)
-    sobra_oleo = qnt_oleo - (quantidade_de_cestas * cesta_qnt_oleo)
-    sobra_farinha_de_trigo = qnt_farinha_de_trigo - (quantidade_de_cestas * cesta_qnt_farinha_de_trigo)
-    sobra_feijao = qnt_feijao - (quantidade_de_cestas * cesta_qnt_feijao)
-    sobra_sal = qnt_sal - (quantidade_de_cestas * cesta_qnt_sal)
+    sobra_acucar = qnt_acucar - (quantidade_de_cestas * CESTA_QNT_ACUCAR)
+    sobra_arroz = qnt_arroz - (quantidade_de_cestas * CESTA_QNT_ARROZ)
+    sobra_cafe = qnt_cafe - (quantidade_de_cestas * CESTA_QNT_CAFE)
+    sobra_extrato_de_tomate = qnt_extrato_de_tomate - (quantidade_de_cestas * CESTA_QNT_EXTRATO_DE_TOMATE)
+    sobra_macarrao = qnt_macarrao - (quantidade_de_cestas * CESTA_QNT_MACARRAO)
+    sobra_pct_bolacha = qnt_pct_bolacha - (quantidade_de_cestas * CESTA_QNT_PCT_BOLACHA)
+    sobra_oleo = qnt_oleo - (quantidade_de_cestas * CESTA_QNT_OLEO)
+    sobra_farinha_de_trigo = qnt_farinha_de_trigo - (quantidade_de_cestas * CESTA_QNT_FARINHA_DE_TRIGO)
+    sobra_feijao = qnt_feijao - (quantidade_de_cestas * CESTA_QNT_FEIJAO)
+    sobra_sal = qnt_sal - (quantidade_de_cestas * CESTA_QNT_SAL)
     sobra_outros = max(qnt_outros - quantidade_de_cestas, 0)
 
 
