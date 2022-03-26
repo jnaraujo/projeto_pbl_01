@@ -69,6 +69,11 @@ deve_continuar = True
 
 ########## FUNÇÕES ##########
 
+# Função que limpa a tela do terminal
+def clear():
+    import os
+    os.system('clear')
+
 # Recebe do usuário um input do tipo int e verifica se o valor informado está dentre os limites pra estabelecidos
 # Se estiver, o valor é retornado.
 # Se não, uma mensagem de erro é exibido e o usuário é novamente pedido para informar o valor correto
