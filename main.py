@@ -157,6 +157,7 @@ def calcular_sobra_de_itens():
     sobra_outros = max(qnt_outros - quantidade_de_cestas, 0)
 
 
+
 ########## PARTE VISUAL DO PROJETO ##########
 
 print("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=")
@@ -168,11 +169,14 @@ print("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=")
 input("Aperte ENTER para cadastrar um novo doador: ")  # somente para não iniciar diretamente no cadastro de usuários
 
 while deve_continuar:
-    # Informações do usuário
+    clear() # limpa a tela do terminal
     print("\n=-=-=-=-=-=-=-= Sobre o doador =-=-=-=-=-=-=-=")
-    nome = str(input("Qual o nome do doador? ")).upper()
+
+    # Recebe os dados sobre o doador
+    nome = str(input("Qual o nome do doador? ")).upper() # nome do doador
     tipo_do_doador = ler_e_validar_tipo_do_doador("Qual o tipo de pessoa? (fisica ou juridica) ")
 
+    # Mostra na tela os itens do menu
     print("\n=-=-=-=-=-=-=-= Escolha o item para adicionar =-=-=-=-=-=-=-=")
     print("[0] {:<25} [7] {:<25}".format("Açúcar", "Farinha de Trigo"))
     print("[1] {:<25} [8] {:<25}".format("Arroz", "Feijão"))
@@ -181,37 +185,38 @@ while deve_continuar:
     print("[4] {:<25}".format("Macarrão", ""))
     print("[5] {:<25}".format("Pacote de Bolacha", ""))
     print("[6] {:<25} [11] {:<25}".format("Óleo", "Finalizar doação"))
+    print("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=")
 
-    numero_da_opcao = 0
+    numero_da_opcao = 0 # pré define o item do menu como 0
 
     while numero_da_opcao != 11: # Equanto o usuário não pedir o relatório
-        numero_da_opcao = ler_e_validar_input_de_numeros(0, 11, "Sua Opção: ", "Digite um número entre 0 (zero) e 11 (onze): ")
+        numero_da_opcao = ler_e_validar_input_de_numeros(0, 11, "Sua Opção: ", "Digite um número entre 0 (zero) e 11 (onze): ") # pede e valida a opção de menu do usuário
 
         # Pré define as variáveis locais e iguala seus valores a 0
         local_qnt_acucar = local_qnt_arroz = local_qnt_cafe = local_qnt_extrato_de_tomate = local_qnt_macarrao = local_qnt_pct_bolacha = local_qnt_oleo = local_qnt_farinha_de_trigo = local_qnt_feijao = local_qnt_sal = local_qnt_outros = 0
 
         # Verifica a opção que o usuário digitou
-        if numero_da_opcao == 0:
+        if numero_da_opcao == 0: # açucar
             local_qnt_acucar = ler_e_validar_item(f"Quanto de Açúcar foi doado por {nome}? (KG) ")
-        elif numero_da_opcao == 1:
+        elif numero_da_opcao == 1: # arroz
             local_qnt_arroz = ler_e_validar_item(f"Quanto de Arroz foi doado por {nome}? (KG) ")
-        elif numero_da_opcao == 2:
+        elif numero_da_opcao == 2: # café
             local_qnt_cafe = ler_e_validar_item(f"Quanto de Café foi doado por {nome}? (KG) ")
-        elif numero_da_opcao == 3:
+        elif numero_da_opcao == 3: # extrato de tomate
             local_qnt_extrato_de_tomate = ler_e_validar_item(f"Quanto de Extrato de Tomate foi doado por {nome}? (unidades) ")
-        elif numero_da_opcao == 4:
+        elif numero_da_opcao == 4: # macarrão
             local_qnt_macarrao = ler_e_validar_item(f"Quanto de Macarrão foi doado por {nome}? (unidades) ")
-        elif numero_da_opcao == 5:
+        elif numero_da_opcao == 5: # pacote de bolacha
             local_qnt_pct_bolacha = ler_e_validar_item(f"Quanto de Pacote de Bolacha foi doado por {nome}? (unidades) ")
-        elif numero_da_opcao == 6:
+        elif numero_da_opcao == 6: # óleo
             local_qnt_oleo = ler_e_validar_item(f"Quanto de Óleo foi doado por {nome}? (litros) ")
-        elif numero_da_opcao == 7:
+        elif numero_da_opcao == 7: # farinha de trigo
             local_qnt_farinha_de_trigo = ler_e_validar_item(f"Quanto de Farinha de Trigo foi doado por {nome}? (KG) ")
-        elif numero_da_opcao == 8:
+        elif numero_da_opcao == 8: # feijão
             local_qnt_feijao = ler_e_validar_item(f"Quanto de Feijão foi doado por {nome}? (KG) ")
-        elif numero_da_opcao == 9:
+        elif numero_da_opcao == 9: # sal
             local_qnt_sal = ler_e_validar_item(f"Quanto de Sal foi doado por {nome}? (KG) ")
-        elif numero_da_opcao == 10:
+        elif numero_da_opcao == 10: # outro itens
             local_qnt_outros = ler_e_validar_item(f"Quanto de Outros Itens foi doado por {nome}? (unidades) ")
 
         # Adiciona o item doado pelo usuário aos itens totais doados
@@ -235,14 +240,22 @@ while deve_continuar:
         elif tipo_do_doador == "juridica":
             qnt_de_doacoes_por_pessoa_juridica += total_itens_doados_pelo_usuario
 
+    clear() # limpa a tela do terminal
+
     print(f"\nMuito bem! O doador {nome} foi devidamente cadastrado!")
     print("Você deseja continuar a cadastrar outro doador?")
-    deve_continuar = ler_e_validar_input_de_numeros(0, 1, "[0] {:<25} [1] {:<25}".format("Adicionar novo doador", "Ir para relatórios"), "Valor informado é inválido.") == 0
+    print("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=")
+    print("[0] {:<25} [1] {:<25}".format("Adicionar novo doador", "Ir para relatórios"))
+    print("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=")
+    deve_continuar = ler_e_validar_input_de_numeros(0, 1, "Sua opção: ", "Valor informado é inválido.") == 0
+
+
 
 ########## PRINT DOS RELATÓRIOS ##########
 
-print("\n=-=-=-=-=-=-=-= Relatório das Doações =-=-=-=-=-=-=-=")
-print("")
+clear() # limpa a tela do terminal
+
+print("\n=-=-=-=-=-=-=-= Relatório das Doações =-=-=-=-=-=-=-=\n")
 print("Itens doados:")
 print(f"     {qnt_acucar} KG de Açúcar")
 print(f"     {qnt_arroz} KG de Arroz")
@@ -258,26 +271,22 @@ print(f"     {qnt_outros} unidade(s) de Outros Produtos")
 print("")
 print("Itens doados por tipo de pessoa:")
 print(f"     {qnt_de_doacoes_por_pessoa_fisica} item(ns) doado(s) por PESSOA FÍSICA")
-print(f"     {qnt_de_doacoes_por_pessoa_juridica} item(ns) doado(s) por PESSOA JURÍDICA")
-print("")
+print(f"     {qnt_de_doacoes_por_pessoa_juridica} item(ns) doado(s) por PESSOA JURÍDICA\n")
 
 quantidade_de_cestas = calcular_cestas()  # calcula quantas cestas básicas poderão ser formadas
 
 print("Cestas básicas que poderão ser formadas:")
-print(f"     {quantidade_de_cestas} cesta(s) básica(s) completa(s)")
-print("")
+print(f"     {quantidade_de_cestas} cesta(s) básica(s) completa(s)\n")
 
 quantidade_de_cestas_com_item_extra = cestas_com_item_extra()  # calcula quantas cestas terão itens extras
 
 print("Cestas básicas que receberão itens extras:")
-print(f"     {quantidade_de_cestas_com_item_extra} cesta(s) básica(s)")
-print("")
+print(f"     {quantidade_de_cestas_com_item_extra} cesta(s) básica(s)\n")
 
 quantidade_de_cestas_sem_item_extra = quantidade_de_cestas - quantidade_de_cestas_com_item_extra
 
 print("Cestas básicas que NÃO receberão itens extras:")
-print(f"     {quantidade_de_cestas_sem_item_extra} cesta(s) básica(s)")
-print("")
+print(f"     {quantidade_de_cestas_sem_item_extra} cesta(s) básica(s)\n")
 
 calcular_sobra_de_itens() # calcula quantos itens sobraram após a montagem das cestas
 
@@ -293,4 +302,3 @@ print(f"     {sobra_farinha_de_trigo} unidade(s) de Farinha de Trigo")
 print(f"     {sobra_feijao} KG de Feijão")
 print(f"     {sobra_sal} KG de Sal")
 print(f"     {sobra_outros} unidade(s) de Outros Produtos")
-print("")
