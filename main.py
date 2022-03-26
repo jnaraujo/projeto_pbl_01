@@ -87,9 +87,11 @@ def ler_e_validar_input_de_numeros(v_min, v_max, mensagem, erro):
         print("Valor inválido.")
         return ler_e_validar_input_de_numeros(v_min, v_max, mensagem, erro)
 
-# Recebe do usuário um input do tipo int e verifica se o valor informado é valido
-# Se positivo, o valor é retornado.
-# Se negativo, uma mensagem de erro é exibido e o usuário é novamente pedido para informar o valor correto
+'''
+    Recebe do usuário um input do tipo int e verifica se o valor informado é valido
+    Se positivo, o valor é retornado.
+    Se negativo, uma mensagem de erro é exibido e o usuário é novamente pedido para informar o valor correto
+'''
 def ler_e_validar_item(mensagem):
     try:
         entrada = int(input(mensagem))
