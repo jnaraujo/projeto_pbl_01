@@ -160,6 +160,8 @@ def calcular_sobra_de_itens():
 
 ########## PARTE VISUAL DO PROJETO ##########
 
+clear() # limpa a tela do terminal
+
 print("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=")
 print(" Olá, usuário!")
 print(" Seja bem-vindo(a) ao")
