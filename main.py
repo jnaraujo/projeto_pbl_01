@@ -11,6 +11,10 @@
 
 ******************************************************************************************/ """
 
+########## LIBS ##########
+
+import os
+
 ########## CONSTANTES ##########
 
 # Quantidades de itens por cesta básica
@@ -65,13 +69,12 @@ qnt_de_doacoes_por_pessoa_juridica = 0
 
 # Variáveis para controle de funcionamento
 deve_continuar = True
-
+mostrar_relatorio = True
 
 ########## FUNÇÕES ##########
 
 # Função que limpa a tela do terminal
 def clear():
-    import os
     os.system('clear')
 
 # Recebe do usuário um input do tipo int e verifica se o valor informado está dentre os limites pra estabelecidos
@@ -120,43 +123,6 @@ def ler_e_validar_tipo_do_doador(mensagem):
         print("Valor informado é inválido.")
         return ler_e_validar_tipo_do_doador(mensagem)
 
-# Retorna quantas cestas básicas poderão ser formadas com os itens doados
-def calcular_cestas():
-    # quantos itens podem ser feitos por cesta
-    cestas_com_acucar = qnt_acucar // CESTA_QNT_ACUCAR
-    cestas_com_arroz = qnt_arroz // CESTA_QNT_ARROZ
-    cestas_com_cafe = qnt_cafe // CESTA_QNT_CAFE
-    cestas_com_extrato_de_tomate = qnt_extrato_de_tomate // CESTA_QNT_EXTRATO_DE_TOMATE
-    cestas_com_macarrao = qnt_macarrao // CESTA_QNT_MACARRAO
-    cestas_com_pct_bolacha = qnt_pct_bolacha // CESTA_QNT_PCT_BOLACHA
-    cestas_com_oleo = qnt_oleo // CESTA_QNT_OLEO
-    cestas_com_farinha_de_trigo = qnt_farinha_de_trigo // CESTA_QNT_FARINHA_DE_TRIGO
-    cestas_com_feijao = qnt_feijao // CESTA_QNT_FEIJAO
-    cestas_com_sal = qnt_sal // CESTA_QNT_SAL
-
-    return min(cestas_com_acucar, cestas_com_arroz, cestas_com_cafe, cestas_com_extrato_de_tomate, cestas_com_macarrao, cestas_com_pct_bolacha, cestas_com_oleo, cestas_com_farinha_de_trigo, cestas_com_feijao, cestas_com_sal)
-
-# Retorna quantas cestas básicas terão itens extras
-def cestas_com_item_extra():
-    return min(qnt_outros, quantidade_de_cestas)
-
-# Calcula quantos itens sobraram após a montagem das cestas e altera as varíaveis globalmente
-def calcular_sobra_de_itens():
-    global sobra_acucar, sobra_arroz, sobra_cafe, sobra_extrato_de_tomate, sobra_macarrao, sobra_pct_bolacha, sobra_oleo, sobra_farinha_de_trigo, sobra_feijao, sobra_sal, sobra_outros  # adiciona as variáveis globais ao escopo local para poderem ser alteradas
-
-    sobra_acucar = qnt_acucar - (quantidade_de_cestas * CESTA_QNT_ACUCAR)
-    sobra_arroz = qnt_arroz - (quantidade_de_cestas * CESTA_QNT_ARROZ)
-    sobra_cafe = qnt_cafe - (quantidade_de_cestas * CESTA_QNT_CAFE)
-    sobra_extrato_de_tomate = qnt_extrato_de_tomate - (quantidade_de_cestas * CESTA_QNT_EXTRATO_DE_TOMATE)
-    sobra_macarrao = qnt_macarrao - (quantidade_de_cestas * CESTA_QNT_MACARRAO)
-    sobra_pct_bolacha = qnt_pct_bolacha - (quantidade_de_cestas * CESTA_QNT_PCT_BOLACHA)
-    sobra_oleo = qnt_oleo - (quantidade_de_cestas * CESTA_QNT_OLEO)
-    sobra_farinha_de_trigo = qnt_farinha_de_trigo - (quantidade_de_cestas * CESTA_QNT_FARINHA_DE_TRIGO)
-    sobra_feijao = qnt_feijao - (quantidade_de_cestas * CESTA_QNT_FEIJAO)
-    sobra_sal = qnt_sal - (quantidade_de_cestas * CESTA_QNT_SAL)
-    sobra_outros = max(qnt_outros - quantidade_de_cestas, 0)
-
-
 
 ########## PARTE VISUAL DO PROJETO ##########
 
@@ -168,7 +134,20 @@ print(" Seja bem-vindo(a) ao")
 print(" Sistema de Registro de Doações do Dispensário Santana ( SRDDS )")
 print("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=")
 
-input("Aperte ENTER para cadastrar um novo doador: ")  # somente para não iniciar diretamente no cadastro de usuários
+print("Escolha o que você deseja fazer:")
+print("[0] Adicionar doação")
+print("[1] Ir para o relatório")
+print("[2] Sair")
+
+opcao_inicial = ler_e_validar_input_de_numeros(0, 2, "Sua Opção: ", "Digite um número entre 0 (zero) e 2 (dois): ")
+
+if opcao_inicial == 0:
+    deve_continuar = True
+elif opcao_inicial == 1:
+    deve_continuar = False
+else:
+    deve_continuar = False
+    mostrar_relatorio = False
 
 while deve_continuar:
     clear() # limpa a tela do terminal
@@ -255,52 +234,79 @@ while deve_continuar:
 
 ########## PRINT DOS RELATÓRIOS ##########
 
-clear() # limpa a tela do terminal
+if mostrar_relatorio:
+    clear() # limpa a tela do terminal
 
-print("\n=-=-=-=-=-=-=-= Relatório das Doações =-=-=-=-=-=-=-=\n")
-print("Itens doados:")
-print(f"     {qnt_acucar} KG de Açúcar")
-print(f"     {qnt_arroz} KG de Arroz")
-print(f"     {qnt_cafe} KG de Café")
-print(f"     {qnt_extrato_de_tomate} unidade(s) de Extrato de Tomate")
-print(f"     {qnt_macarrao} unidade(s) de Macarrão")
-print(f"     {qnt_pct_bolacha} unidade(s) de Pacote de Bolacha")
-print(f"     {qnt_oleo} litro(s) de Óleo")
-print(f"     {qnt_farinha_de_trigo} unidade(s) de Farinha de Trigo")
-print(f"     {qnt_feijao} KG de Feijão")
-print(f"     {qnt_sal} KG de Sal")
-print(f"     {qnt_outros} unidade(s) de Outros Produtos")
-print("")
-print("Itens doados por tipo de pessoa:")
-print(f"     {qnt_de_doacoes_por_pessoa_fisica} item(ns) doado(s) por PESSOA FÍSICA")
-print(f"     {qnt_de_doacoes_por_pessoa_juridica} item(ns) doado(s) por PESSOA JURÍDICA\n")
+    print("\n=-=-=-=-=-=-=-= Relatório das Doações =-=-=-=-=-=-=-=\n")
+    print("Itens doados:")
+    print(f"     {qnt_acucar} KG de Açúcar")
+    print(f"     {qnt_arroz} KG de Arroz")
+    print(f"     {qnt_cafe} KG de Café")
+    print(f"     {qnt_extrato_de_tomate} unidade(s) de Extrato de Tomate")
+    print(f"     {qnt_macarrao} unidade(s) de Macarrão")
+    print(f"     {qnt_pct_bolacha} unidade(s) de Pacote de Bolacha")
+    print(f"     {qnt_oleo} litro(s) de Óleo")
+    print(f"     {qnt_farinha_de_trigo} unidade(s) de Farinha de Trigo")
+    print(f"     {qnt_feijao} KG de Feijão")
+    print(f"     {qnt_sal} KG de Sal")
+    print(f"     {qnt_outros} unidade(s) de Outros Produtos")
+    print("")
+    print("Itens doados por tipo de pessoa:")
+    print(f"     {qnt_de_doacoes_por_pessoa_fisica} item(ns) doado(s) por PESSOA FÍSICA")
+    print(f"     {qnt_de_doacoes_por_pessoa_juridica} item(ns) doado(s) por PESSOA JURÍDICA\n")
 
-quantidade_de_cestas = calcular_cestas()  # calcula quantas cestas básicas poderão ser formadas
 
-print("Cestas básicas que poderão ser formadas:")
-print(f"     {quantidade_de_cestas} cesta(s) básica(s) completa(s)\n")
+    # calcula quantas cestas básicas poderão ser formadas
+    cestas_com_acucar = qnt_acucar // CESTA_QNT_ACUCAR
+    cestas_com_arroz = qnt_arroz // CESTA_QNT_ARROZ
+    cestas_com_cafe = qnt_cafe // CESTA_QNT_CAFE
+    cestas_com_extrato_de_tomate = qnt_extrato_de_tomate // CESTA_QNT_EXTRATO_DE_TOMATE
+    cestas_com_macarrao = qnt_macarrao // CESTA_QNT_MACARRAO
+    cestas_com_pct_bolacha = qnt_pct_bolacha // CESTA_QNT_PCT_BOLACHA
+    cestas_com_oleo = qnt_oleo // CESTA_QNT_OLEO
+    cestas_com_farinha_de_trigo = qnt_farinha_de_trigo // CESTA_QNT_FARINHA_DE_TRIGO
+    cestas_com_feijao = qnt_feijao // CESTA_QNT_FEIJAO
+    cestas_com_sal = qnt_sal // CESTA_QNT_SAL
 
-quantidade_de_cestas_com_item_extra = cestas_com_item_extra()  # calcula quantas cestas terão itens extras
+    quantidade_de_cestas = min(cestas_com_acucar, cestas_com_arroz, cestas_com_cafe, cestas_com_extrato_de_tomate, cestas_com_macarrao, cestas_com_pct_bolacha, cestas_com_oleo, cestas_com_farinha_de_trigo, cestas_com_feijao, cestas_com_sal)
+    # fim do calculo
 
-print("Cestas básicas que receberão itens extras:")
-print(f"     {quantidade_de_cestas_com_item_extra} cesta(s) básica(s)\n")
+    print("Cestas básicas que poderão ser formadas:")
+    print(f"     {quantidade_de_cestas} cesta(s) básica(s) completa(s)\n")
 
-quantidade_de_cestas_sem_item_extra = quantidade_de_cestas - quantidade_de_cestas_com_item_extra
+    quantidade_de_cestas_com_item_extra = min(qnt_outros, quantidade_de_cestas)  # calcula quantas cestas terão itens extras
 
-print("Cestas básicas que NÃO receberão itens extras:")
-print(f"     {quantidade_de_cestas_sem_item_extra} cesta(s) básica(s)\n")
+    print("Cestas básicas que receberão itens extras:")
+    print(f"     {quantidade_de_cestas_com_item_extra} cesta(s) básica(s)\n")
 
-calcular_sobra_de_itens() # calcula quantos itens sobraram após a montagem das cestas
+    quantidade_de_cestas_sem_item_extra = quantidade_de_cestas - quantidade_de_cestas_com_item_extra
 
-print("Itens que sobraram após a montagem das Cestas Básicas:")
-print(f"     {sobra_acucar} KG de Açucar")
-print(f"     {sobra_arroz} KG de Arroz")
-print(f"     {sobra_cafe} KG de Café")
-print(f"     {sobra_extrato_de_tomate} unidade(s) de Extrato de Tomate")
-print(f"     {sobra_macarrao} unidade(s) de Macarrão")
-print(f"     {sobra_pct_bolacha} unidade(s) de Pacote de Bolacha")
-print(f"     {sobra_oleo} litro(s) de Óleo")
-print(f"     {sobra_farinha_de_trigo} unidade(s) de Farinha de Trigo")
-print(f"     {sobra_feijao} KG de Feijão")
-print(f"     {sobra_sal} KG de Sal")
-print(f"     {sobra_outros} unidade(s) de Outros Produtos")
+    print("Cestas básicas que NÃO receberão itens extras:")
+    print(f"     {quantidade_de_cestas_sem_item_extra} cesta(s) básica(s)\n")
+
+    # calcula quantos itens sobraram após a montagem das cestas
+    sobra_acucar = qnt_acucar - (quantidade_de_cestas * CESTA_QNT_ACUCAR)
+    sobra_arroz = qnt_arroz - (quantidade_de_cestas * CESTA_QNT_ARROZ)
+    sobra_cafe = qnt_cafe - (quantidade_de_cestas * CESTA_QNT_CAFE)
+    sobra_extrato_de_tomate = qnt_extrato_de_tomate - (quantidade_de_cestas * CESTA_QNT_EXTRATO_DE_TOMATE)
+    sobra_macarrao = qnt_macarrao - (quantidade_de_cestas * CESTA_QNT_MACARRAO)
+    sobra_pct_bolacha = qnt_pct_bolacha - (quantidade_de_cestas * CESTA_QNT_PCT_BOLACHA)
+    sobra_oleo = qnt_oleo - (quantidade_de_cestas * CESTA_QNT_OLEO)
+    sobra_farinha_de_trigo = qnt_farinha_de_trigo - (quantidade_de_cestas * CESTA_QNT_FARINHA_DE_TRIGO)
+    sobra_feijao = qnt_feijao - (quantidade_de_cestas * CESTA_QNT_FEIJAO)
+    sobra_sal = qnt_sal - (quantidade_de_cestas * CESTA_QNT_SAL)
+    sobra_outros = max(qnt_outros - quantidade_de_cestas, 0)
+    # fim do calculo
+
+    print("Itens que sobraram após a montagem das Cestas Básicas:")
+    print(f"     {sobra_acucar} KG de Açucar")
+    print(f"     {sobra_arroz} KG de Arroz")
+    print(f"     {sobra_cafe} KG de Café")
+    print(f"     {sobra_extrato_de_tomate} unidade(s) de Extrato de Tomate")
+    print(f"     {sobra_macarrao} unidade(s) de Macarrão")
+    print(f"     {sobra_pct_bolacha} unidade(s) de Pacote de Bolacha")
+    print(f"     {sobra_oleo} litro(s) de Óleo")
+    print(f"     {sobra_farinha_de_trigo} unidade(s) de Farinha de Trigo")
+    print(f"     {sobra_feijao} KG de Feijão")
+    print(f"     {sobra_sal} KG de Sal")
+    print(f"     {sobra_outros} unidade(s) de Outros Produtos")
