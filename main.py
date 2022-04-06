@@ -2,7 +2,7 @@
 
     Autor: Jônatas Araújo Silva Santos
     Componente Curricular: Algoritmos I
-    Concluido em: 30/03/2022
+    Concluido em: 05/04/2022
     Declaro que este código foi elaborado por mim de forma individual e não contém nenhum
     trecho de código de outro colega ou de outro autor, tais como provindos de livros e
     apostilas, e páginas ou documentos eletrônicos da Internet. Qualquer trecho de código de
@@ -272,7 +272,7 @@ if mostrar_relatorio: # se foi escolhido a opção de mostrar o relatório
     cestas_com_sal = qnt_sal // SAL_QNT_POR_CESTA
 
     quantidade_de_cestas = min(cestas_com_acucar, cestas_com_arroz, cestas_com_cafe, cestas_com_extrato_de_tomate, cestas_com_macarrao, cestas_com_pct_bolacha, cestas_com_oleo, cestas_com_farinha_de_trigo, cestas_com_feijao, cestas_com_sal) # pega o menor valor dentre as cestas calculadas.
-    
+
     # fim do calculo
 
     print("Cestas básicas que poderão ser formadas:")
