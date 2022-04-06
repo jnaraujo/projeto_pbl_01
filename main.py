@@ -2,7 +2,7 @@
 
     Autor: Jônatas Araújo Silva Santos
     Componente Curricular: Algoritmos I
-    Concluido em: 05/04/2022
+    Concluido em: 06/04/2022
     Declaro que este código foi elaborado por mim de forma individual e não contém nenhum
     trecho de código de outro colega ou de outro autor, tais como provindos de livros e
     apostilas, e páginas ou documentos eletrônicos da Internet. Qualquer trecho de código de
@@ -81,15 +81,19 @@ def clear():
 # Recebe do usuário um input do tipo int e verifica se o valor informado está dentre os limites pra estabelecidos
 # Se estiver, o valor é retornado.
 # Se não, uma mensagem de erro é exibido e o usuário é novamente pedido para informar o valor correto
-def ler_e_validar_input_de_numeros(v_min, v_max, mensagem, erro):
+def ler_e_validar_input_de_numeros(v_min, v_max, mensagem, mensagem_erro):
+    # v_min é o menor valor válido que o usuário pode digitar
+    # v_max é o maior valor válido que o usuário pode digitar
+    # mensagem é a mensagem que será exibida para o usuário para pedir a entrada
+    # mensagem_erro é a mensagem que será exibida caso o usuário digite um valor inválido
     try:
         entrada = int(input(mensagem))
         while entrada < v_min or entrada > v_max:
-            entrada = int(input(erro))
+            entrada = int(input(mensagem_erro))
         return entrada
     except:
         print("Valor inválido.")
-        return ler_e_validar_input_de_numeros(v_min, v_max, mensagem, erro)
+        return ler_e_validar_input_de_numeros(v_min, v_max, mensagem, mensagem_erro)
 
 '''
     Recebe do usuário um input do tipo int e verifica se o valor informado é valido
@@ -97,6 +101,7 @@ def ler_e_validar_input_de_numeros(v_min, v_max, mensagem, erro):
     Se negativo, uma mensagem de erro é exibido e o usuário é novamente pedido para informar o valor correto
 '''
 def ler_e_validar_item(mensagem):
+    # mensagem é a mensagem que será exibida para o usuário para pedir a entrada
     try:
         entrada = int(input(mensagem))
 
@@ -115,7 +120,9 @@ def ler_e_validar_item(mensagem):
 # Se positivo, o valor é retornado.
 # Se negativo, uma mensagem de erro é exibido e o usuário é novamente pedido para informar o valor correto
 def ler_e_validar_tipo_do_doador(mensagem):
-    entrada = input(mensagem).lower()
+    # mensagem é a mensagem que será exibida para o usuário para pedir a entrada
+
+    entrada = input(mensagem).lower() # pede a entrada e converte para minusculo
 
     # verifica se o tipo de doador é valido
     if entrada == "fisica" or entrada == "juridica":
