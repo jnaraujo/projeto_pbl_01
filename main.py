@@ -75,7 +75,7 @@ mostrar_relatorio = True
 
 # Função que limpa a tela do terminal
 def clear():
-    os.system('clear')
+    os.system("clear")
 
 # Recebe do usuário um input do tipo int e verifica se o valor informado está dentre os limites pra estabelecidos
 # Se estiver, o valor é retornado.
@@ -279,7 +279,7 @@ if mostrar_relatorio:
     print("Cestas básicas que receberão itens extras:")
     print(f"     {quantidade_de_cestas_com_item_extra} cesta(s) básica(s)\n")
 
-    quantidade_de_cestas_sem_item_extra = quantidade_de_cestas - quantidade_de_cestas_com_item_extra
+    quantidade_de_cestas_sem_item_extra = quantidade_de_cestas - quantidade_de_cestas_com_item_extra # calcula quantas cestas não terão itens extras
 
     print("Cestas básicas que NÃO receberão itens extras:")
     print(f"     {quantidade_de_cestas_sem_item_extra} cesta(s) básica(s)\n")
